@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+    {% block body_block %}
+    <h1>WELCOME TO RELATIVE URL TEMPLATE PAGE</h1>
+    {% comment %} other pages {% endcomment %}
+    <a href="{% url 'basic_app:other' %}">Other Page</a>
+    {% comment %} admin page {% endcomment %}
+    <a href="{% url 'admin:index' %}">Admin Page</a>
+    {% comment %} index pager {% endcomment %}
+    <a href="{% url 'index' %}">Index Page</a>
+    {% endblock  %}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        li{
+            display: inline;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Index</a></li>
+            <li><a href="{% url 'basic_app:other'%}">Other</a></li>
+            <li><a href="{% url 'basic_app:relative'%}">Relative</a></li>
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+        </u>
+    </nav>
+
+
+     {% block body_block %}
+    {% comment %} Anything you write here will be inherited if you extend {% endcomment %}
+    {% endblock  %}
+</body>
+</html>
